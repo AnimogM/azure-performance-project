@@ -35,9 +35,7 @@ logger.addHandler(AzureEventHandler(connection_string=connectionString))
 logger.setLevel(logging.INFO)
 
 # Metrics
-exporter = metrics_exporter.new_metrics_exporter(
-            enable_standard_metrics=True, 
-                connection_string=connectionString)
+exporter = metrics_exporter.new_metrics_exporter(enable_standard_metrics=True, connection_string=connectionString)
 
 view_manager.register_exporter(exporter)
 
